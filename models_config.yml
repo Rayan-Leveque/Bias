@@ -29,7 +29,7 @@ evaluation:
   max_model_len: 4096
   
   # Sampling temperature (0.0 = deterministic, 1.0 = creative)
-  temperature: 0.8
+  temperature: 0.0
   
   # Maximum tokens to generate per response
   max_tokens: 512
@@ -93,26 +93,26 @@ models:
     display_name: "Qwen3-30B-A3B-Instruct-2507"
     tensor_parallel_size: 1
     pipeline_parallel_size: 3
-    enabled: false
+    enabled: true
     revision: null
-    gpu_memory_utilization: 0.90
+    gpu_memory_utilization: 0.85
 
 
   - name: "mistralai/Mistral-Small-3.2-24B-Instruct-2506"
     display_name: "Mistral-Small-3.2-24B"
     tensor_parallel_size: 2
     pipeline_parallel_size: 1
-    enabled: false
+    enabled: true
     revision: null
-    gpu_memory_utilization: 0.95
+    gpu_memory_utilization: 0.90
 
   - name: "Qwen/Qwen3-14B-AWQ"
     display_name: "Qwen3-14B-AWQ"
     tensor_parallel_size: 2
     pipeline_parallel_size: 1
-    enabled: false
+    enabled: true
     revision: null
-    gpu_memory_utilization: 0.95
+    gpu_memory_utilization: 0.90
 
   - name: "google/gemma-3-27b-it"
     display_name: "Gemma-3-27b-it"
@@ -126,17 +126,26 @@ models:
     display_name: "Kimi-Linear-48B-A3B-Instruct-AWQ"
     tensor_parallel_size: 2 
     pipeline_parallel_size: 1
-    enabled: true
+    enabled: false
     revision: null
     gpu_memory_utilization: 0.95
+    notes: "Not working"
+
+  - name: "openai/gpt-oss-20b"
+    display_name: "openai/gpt-oss-20b"
+    tensor_parallel_size: 1
+    pipeline_parallel_size: 3
+    enabled: true
+    revision: null
+    gpu_memory_utilization: 0.90
 
   - name: "microsoft/phi-4"
     display_name: "Phi-4"
     tensor_parallel_size: 1
     pipeline_parallel_size: 3
-    enabled: false
+    enabled: true
     revision: null
-    gpu_memory_utilization: 0.95
+    gpu_memory_utilization: 0.90
   # ==========================================================================
   # LARGE MODELS (80B-200B parameters, 3 GPUs with pipeline parallelism)
   # Uses all GPUs, runs sequentially
