@@ -4,7 +4,13 @@
 
 Lorsqu'un LLM évalue des candidats **séparément** (condition single), il tend à favoriser les minorités — probablement par sur-correction RLHF (social desirability). Lorsqu'il est placé en situation de **comparaison directe**, il tend à favoriser la majorité — les stéréotypes implicites s'activent.
 
-Ce phénomène est à rapprocher de la littérature sur l'évaluation séparée vs. conjointe (Hsee, 1996) et des audit studies (Bertrand & Mullainathan, 2004).
+Cette dissociation s'appuie sur deux corpus de littérature distincts :
+
+- **Tests en condition single** — [Biases in the Blind Spot (Gallegos et al., 2025, arXiv:2602.10117)](https://arxiv.org/abs/2602.10117) montre qu'en évaluation isolée, les LLMs produisent des biais non verbalisés (religion, origine, langue) tout en maintenant une apparence de neutralité dans leur raisonnement. En condition single, la pression sociale (RLHF) pousse les modèles à corriger explicitement en faveur des groupes minoritaires, ce qui masque — sans éliminer — les stéréotypes sous-jacents.
+
+- **Tests en condition comparative (IAT)** — [Bai et al. (2024, arXiv:2402.04105)](https://arxiv.org/abs/2402.04105) adaptent l'Implicit Association Test (IAT) aux LLMs et introduisent une mesure de *Decision Bias* fondée sur l'évaluation relative de deux candidats. Leur résultat clé : les modèles alignés sur des valeurs égalitaires (GPT-4, Claude, LLaMA2) passent les tests explicites mais révèlent des biais stéréotypés pervasifs en comparaison directe — par exemple, GPT-4 oriente les candidats à noms africains/hispaniques vers des postes de clerc et les candidats à noms caucasiens vers des postes d'encadrement. L'évaluation relative est significativement plus diagnostique que l'évaluation absolue.
+
+Ce phénomène est à rapprocher de la littérature psychologique sur l'évaluation séparée vs. conjointe (Hsee, 1996) et des audit studies (Bertrand & Mullainathan, 2004).
 
 **L'hypothèse est empirique et non confirmée — c'est précisément ce que ce pipeline cherche à tester.**
 
@@ -14,7 +20,7 @@ Ce phénomène est à rapprocher de la littérature sur l'évaluation séparée 
 
 **Embauche / évaluation de CV** — contexte français.
 
-Littérature de référence : études de testing ISM Corum, données DARES, et l'article [arXiv:2602.10117](https://arxiv.org/pdf/2602.10117) sur la détection automatique de biais non verbalisés.
+Littérature de référence : études de testing ISM Corum, données DARES, [Bai et al. (2024)](https://arxiv.org/abs/2402.04105) pour l'adaptation de l'IAT aux LLMs, et [Gallegos et al. (2025)](https://arxiv.org/abs/2602.10117) pour la détection automatique de biais non verbalisés en condition single.
 
 ---
 
