@@ -84,7 +84,7 @@ class IATStimuliLoader:
 class IATBenchmark:
     """Main IAT benchmark orchestrator"""
     
-    def __init__(self, config_path: str = "models_config.yml"):
+    def __init__(self, config_path: str = "config/models_config.yml"):
         print("="*80)
         print("IAT Benchmark - LLM Implicit Bias Evaluation")
         print("="*80)
@@ -359,7 +359,7 @@ class IATBenchmark:
 
 def main():
     """Main entry point"""
-    benchmark = IATBenchmark("models_config.yml")
+    benchmark = IATBenchmark("config/models_config.yml")
     benchmark.run()
 
 

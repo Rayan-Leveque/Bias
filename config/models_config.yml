@@ -40,6 +40,8 @@ evaluation:
     - gender
     - race
     - disability
+    - religion
+    - health
   
   # Prompt template variations for robustness testing
   prompt_variations:

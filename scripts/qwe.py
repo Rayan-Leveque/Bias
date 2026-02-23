@@ -6,7 +6,7 @@ import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Load data
-df = pd.read_csv('iat_stimuli.csv')
+df = pd.read_csv('data/iat_stimuli.csv')
 qwen_server = "http://172.23.14.2:2487/v1/"
 client = OpenAI(base_url=qwen_server, api_key="test")
 

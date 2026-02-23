@@ -437,9 +437,9 @@ def run_cleaning(input_dir: str, stimuli_path: str, output_path: str):
 
 def main():
     parser = argparse.ArgumentParser(description="Pipeline de nettoyage des résultats IAT")
-    parser.add_argument('--input', default='results', help='Dossier contenant les CSVs bruts (default: results)')
-    parser.add_argument('--stimuli', default='iat_stimuli.csv', help='Fichier de stimuli IAT (default: iat_stimuli.csv)')
-    parser.add_argument('--output', default='result_implicit.csv', help='Fichier de sortie (default: result_implicit.csv)')
+    parser.add_argument('--input', default='data/results', help='Dossier contenant les CSVs bruts (default: data/results)')
+    parser.add_argument('--stimuli', default='data/iat_stimuli.csv', help='Fichier de stimuli IAT (default: data/iat_stimuli.csv)')
+    parser.add_argument('--output', default='output/result_implicit.csv', help='Fichier de sortie (default: output/result_implicit.csv)')
     args = parser.parse_args()
 
     run_cleaning(args.input, args.stimuli, args.output)

@@ -1,5 +1,5 @@
 TODO 
-
+Reproduction et amplification de biais sociaux systemiques par les LLM
 # Traitement à faire
 Chercher à desambiguiser les termes noir et blancs avec une liste de prénom 
 Chercher à comparer des CVs égaux
@@ -34,4 +34,4 @@ comparing to take
 
 ## Takeaway 
 
-A tester mais quand test en single les modeles ont tendance à favoriser les minorités, mais quand 
+    A tester mais quand test en single les modeles ont tendance à favoriser les minorités, mais quand on compare favorise majorité 

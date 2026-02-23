@@ -1,4 +1,3 @@
-venv
-result
-results_temp_08
-test*
+venv/
+__pycache__/
+*.pyc

@@ -39,7 +39,7 @@ class ModelConfig:
 class ConfigLoader:
     """Loads and validates YAML configuration"""
     
-    def __init__(self, config_path: str = "models_config.yml"):
+    def __init__(self, config_path: str = "config/models_config.yml"):
         self.config_path = Path(config_path)
         self.config = self._load_yaml()
         self._validate_config()
@@ -231,7 +231,7 @@ class ConfigLoader:
 def main():
     """Example usage"""
     # Load configuration
-    config = ConfigLoader("models_config.yml")
+    config = ConfigLoader("config/models_config.yml")
     
     # Print summary
     config.print_summary()
